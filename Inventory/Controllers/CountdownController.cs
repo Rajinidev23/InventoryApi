@@ -26,7 +26,6 @@ namespace Inventory.Controllers
             var obj = new InventoryEntities();
             var items = obj.tblItems.ToList();
             var response = new MyResponse { MyItemList = items, CountDown = countdownDuration , StartTime=DateTime.Now.ToString()};
-
             return Ok(response);
         }
 
